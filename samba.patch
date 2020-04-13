@@ -1,0 +1,17 @@
+--- /etc/samba/smb.conf	2019-06-10 18:57:13.005596997 +0000
++++ samba.conf.old	2019-06-10 18:59:58.378170527 +0000
+@@ -256,4 +256,13 @@
+ # admin users are members of.
+ # Please note that you also need to set appropriate Unix permissions
+ # to the drivers directory for these users to have write rights in it
+-
++[dysk1]
++comment=Dysk udostepniony
++path =/media/dysk1/
++create mask = 0777
++directory mask = 0777
++valid users=ba
++writeable = yes
++browseable = yes
++public = no
++hide unreadable = yes
